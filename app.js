@@ -27,11 +27,9 @@ app.get("/posts/:postName", function(req, res) {
 
     posts.forEach(function(post) {
         const storedTitle = post.title;
-        if (lodash.kebabCase(storedTitle) === requestedTitle) {
+        if (lodash.lowerCase(storedTitle) === requestedTitle) {
             res.render('post', { title: storedTitle, body: post.body })
 
-        } else {
-            res.redirect('/');
         }
     })
 })
