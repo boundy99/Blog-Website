@@ -1,20 +1,20 @@
 <%- include('partials/header.ejs') -%>
     </header>
     <h1>Compose</h1>
-    <p>
-        <form action="/compose" method="post">
-            <div class="input-group mb-3 textBox">
-                <h4>Title</h4>
-                <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="publication">
-            </div>
-            <div class="input-group mb-3 textBox postBox">
-                <h4>Post</h4>
-                <textarea type="text" cols="40" rows="5" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="publication"> </textarea>
-            </div>
 
-            <div> <button class="btn btn-primary composeButton" type="submit" name="publish">Publish</button></div>
+    <form action="/compose" method="post">
+        <div class="input-group mb-3 textBox">
+            <h4>Title</h4>
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="publication">
+        </div>
+        <div class="input-group mb-3 textBox postBox">
+            <h4>Post</h4>
+            <textarea type="text" cols="40" rows="5" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="publication"> </textarea>
+        </div>
 
-        </form>
-    </p>
+        <button class="btn btn-primary composeButton" type="submit" name="publish">Publish</button>
+
+    </form>
+
 
     <%- include('partials/footer.ejs') -%>
