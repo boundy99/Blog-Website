@@ -21,6 +21,16 @@ app.get('/', (req, res) => {
     res.render('home', { paragraph: homeStartingContent, post: posts })
 })
 
+app.get('/posts/:postName', (req, res) => {
+    const requestedTitle = req.params.postName
+
+    posts.forEach(function(post) {
+        const storedTitle = post.tile;
+        if (storedTitle === requestedTitle) { console.log("Match found") }
+
+    })
+})
+
 app.get('/about', (req, res) => {
     res.render('about', { paragraph: aboutContent })
 })
