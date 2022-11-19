@@ -21,15 +21,12 @@ app.get('/', (req, res) => {
     res.render('home', { paragraph: homeStartingContent, post: posts })
 })
 
-app.get('/posts/:postName', (req, res) => {
-    const requestedTitle = req.params.postName
+app.get("/posts/:postName", function(req, res) {
+    if (posts.title = req.params.postName) {
+        console.log("Match Found!")
+    }
+});
 
-    posts.forEach(function(post) {
-        const storedTitle = post.tile;
-        if (storedTitle === requestedTitle) { console.log("Match found") }
-
-    })
-})
 
 app.get('/about', (req, res) => {
     res.render('about', { paragraph: aboutContent })
