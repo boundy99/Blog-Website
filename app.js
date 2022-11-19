@@ -28,9 +28,10 @@ app.get("/posts/:postName", function(req, res) {
     posts.forEach(function(post) {
         const storedTitle = post.title;
         if (lodash.kebabCase(storedTitle) === requestedTitle) {
-            console.log("Match found")
+            res.render('post', { title: storedTitle, body: post.body })
+
         } else {
-            console.log("Not a match")
+            res.redirect('/');
         }
     })
 })
