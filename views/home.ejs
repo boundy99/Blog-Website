@@ -4,5 +4,14 @@
     <p>
         <%= paragraph %>
     </p>
+    <% post.forEach(function(text){ %>
+        <h1>
+            <%= text.title %>
+        </h1>
+        <p>
+            <%= text.body %>
+        </p>
 
-    <%- include('partials/footer.ejs') -%>
+        <% })  %>
+
+            <%- include('partials/footer.ejs') -%>
